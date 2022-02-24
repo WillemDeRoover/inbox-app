@@ -1,4 +1,4 @@
-package be.desorted;
+package be.desorted.inbox;
 
 import java.io.File;
 

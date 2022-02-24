@@ -1,4 +1,4 @@
-package be.desorted;
+package be.desorted.inbox;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;

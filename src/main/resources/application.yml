@@ -13,10 +13,10 @@ spring:
       password: ${CASSANDRA_PASSWORD}
       schema-action: recreate-drop-unused
       request:
-        timeout: 10s
+        timeout: 20s
       connection:
-        connect-timeout: 10s
-        init-query-timeout: 10s
+        connect-timeout: 20s
+        init-query-timeout: 20s
 
 astra.db:
   id: ${ASTRA_DB_ID}
