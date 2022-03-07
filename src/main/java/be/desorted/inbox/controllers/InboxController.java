@@ -21,11 +21,10 @@ public class InboxController {
 
 	@GetMapping(value = "/")
 	public String homePage(@AuthenticationPrincipal OAuth2User principal, Model model) {
-		String userID = principal.getAttribute("login");
-		if(principal == null || !StringUtils.hasText(userID))  {
+		if(principal == null || !StringUtils.hasText(principal.getAttribute("login")))  {
 			return "index";
 		} else {
-			List<Folder> userFolders = folderRepository.findAllById(userID);
+			List<Folder> userFolders = folderRepository.findAllById(principal.<String>getAttribute("login"));
 			model.addAttribute("userFolders", userFolders);
 			return "inbox-page";
 		}
